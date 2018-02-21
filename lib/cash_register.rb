@@ -9,9 +9,7 @@ class CashRegister
     @discount
   end
   
-  def total
-    @total
-  end
+attr_accessor :total
   
   def add_item(title, price, quantity=1)
     @items << title if !@items.include?(title)
