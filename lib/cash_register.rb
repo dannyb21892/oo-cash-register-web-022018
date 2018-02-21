@@ -25,6 +25,10 @@ attr_accessor :total
     end
   end
   
+  def items
+    @items
+  end
+  
   def void_last_transaction
   end
 end
