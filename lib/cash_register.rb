@@ -2,6 +2,7 @@ class CashRegister
   def initialize(discount=0)
     @discount = discount
     @total = 0
+    @oldtotals = []
     @items = []
   end
   
@@ -15,6 +16,7 @@ attr_accessor :total
     quantity.times do 
       @items << title
     end
+    @oldtotal << @total
     @total += price*quantity
   end
     
@@ -32,5 +34,6 @@ attr_accessor :total
   end
   
   def void_last_transaction
+    @total = @oldtotal.pop
   end
 end
