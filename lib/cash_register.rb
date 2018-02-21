@@ -13,6 +13,10 @@ class CashRegister
     @total
   end
   
+  def total=()
+    @total
+  end
+  
   def add_item(title, price, quantity=1)
     @items << title if !@items.include?(title)
     @total += price*quantity
