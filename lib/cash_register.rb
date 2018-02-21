@@ -19,8 +19,9 @@ attr_accessor :total
   def apply_discount
     if @discount != 0
       @total = (1-(0.01 * @discount))*@total
+      return "After the discount, the total comes to #{@total}"
     else
-      
+      return "There is no discount to apply."
     end
   end
   
