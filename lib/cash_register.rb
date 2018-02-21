@@ -12,7 +12,7 @@ class CashRegister
 attr_accessor :total
   
   def add_item(title, price, quantity=1)
-    @items << title
+    quantity.times do @items << title
     @total += price*quantity
   end
     
