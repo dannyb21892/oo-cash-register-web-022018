@@ -5,6 +5,10 @@ class CashRegister
     @items = []
   end
   
+  def discount
+    @discount
+  end
+  
   def total
     @total
   end
